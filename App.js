@@ -1,20 +1,58 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { useState } from 'react';
+import { Keyboard, ScrollView, StyleSheet, Text, View } from 'react-native';
 
 export default function App() {
+
+  const [task, setTask] = useState()
+  const [taskItems, setTaskItems] = useState()
+
+
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <ScrollView contentContainerStyle={{ flexGrow: 1 }}
+        keyboardShouldPersistTaps='handled'>
+
+        <View style={styles.taskWrapper}>
+          <Text style={styles.sectionTitle}>Tarefas de Hoje!</Text>
+          <View style={styles.items}>
+            { }
+          </View>
+
+        </View>
+
+      </ScrollView>
+
+
+
     </View>
+
+
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: '#E8EAED',
+
   },
+
+  taskWrapper: {
+    paddingTop: 80,
+    paddingLeft: 20,
+
+  },
+
+  sectionTitle: {
+    fontSize: 24,
+    fontWeight: 'bold',
+
+  },
+
+  items: {
+    marginTop: 30,
+
+  },
+
 });
