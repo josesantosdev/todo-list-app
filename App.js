@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { useState } from 'react';
-import { Keyboard, KeyboardAvoidingView, ScrollView, StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
+import { KeyboardAvoidingView, ScrollView, StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
+
 
 export default function App() {
 
@@ -16,7 +17,7 @@ export default function App() {
         <View style={styles.taskWrapper}>
           <Text style={styles.sectionTitle}>Tarefas de Hoje!</Text>
           <View style={styles.items}>
-            <Text>Tarefa</Text>
+            {}
 
           </View>
 
@@ -82,14 +83,30 @@ const styles = StyleSheet.create({
   },
 
   input: {
+    paddingVertical: 15,
+    paddingHorizontal: 15,
+    backgroundColor: '#FFF',
+    borderRadius: 60,
+    borderColor: '#C0C0C0',
+    borderWidth: 1,
+    width: 250,
 
   },
 
   addWrapper: {
-
+    width: 60,
+    height: 60,
+    backgroundColor: '#FFF',
+    borderRadius: 50,
+    borderWidth: 1,
+    borderColor: '#C0C0C0',
+    justifyContent: 'center',
+    alignItems: 'center',
+    
   },
 
   addText: {
+    fontSize: 24,
 
   },
 
