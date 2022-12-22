@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
     },
 
     square: {
-        width24,
+        width: 24,
         height: 24,
         backgroundColor: 'black',
         opacity: -.4,
